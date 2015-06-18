@@ -18,8 +18,8 @@ class postgresql::repo::yum_postgresql_org inherits postgresql::repo {
   }
 
   yumrepo { 'yum.postgresql.org':
-    descr    => "PostgreSQL ${postgresql::repo::version} \$releasever - \$basearch",
-    baseurl  => "http://yum.postgresql.org/${postgresql::repo::version}/${label1}/${label2}-\$releasever-\$basearch",
+    descr    => "PostgreSQL ${postgresql::repo::version} 6 - \$basearch",
+    baseurl  => "http://yum.postgresql.org/${postgresql::repo::version}/${label1}/${label2}-6-\$basearch",
     enabled  => 1,
     gpgcheck => 1,
     gpgkey   => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG-${package_version}",
